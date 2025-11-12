@@ -93,19 +93,33 @@ install.packages(c(
 
 ### Running the Analysis
 
+**Note:** The dataset is already included in the repository, so you can skip data generation and go straight to running the analysis scripts.
+
+#### Option 1: Using RStudio (Recommended for Beginners)
+
 1. **Clone the repository:**
 ```bash
-git clone <repository-url>
+git clone https://github.com/danielpuri1901/sustainable-fashion-analysis-r.git
 cd sustainable-fashion-analysis-r
 ```
 
-2. **Generate the dataset:**
+2. **Open RStudio** and set working directory:
+   - In RStudio: `Session > Set Working Directory > To Project Directory`
+   - Or use: `setwd("/path/to/sustainable-fashion-analysis-r")`
+
+3. **Install packages** (if not already installed):
 ```r
-source("scripts/generate_data.R")
+install.packages(c("dplyr", "ggplot2", "tidyr", "readr", "broom", "car",
+                   "MASS", "scales", "gridExtra", "RColorBrewer",
+                   "knitr", "rmarkdown", "lmtest"))
 ```
 
-3. **Run the analysis scripts in order:**
+4. **Run analysis scripts** (in the R Console):
 ```r
+# Data is already included, but you can regenerate it:
+source("scripts/generate_data.R")
+
+# Run analysis scripts in order:
 source("scripts/01_data_cleaning.R")
 source("scripts/02_exploratory_analysis.R")
 source("scripts/03_hypothesis_testing.R")
@@ -113,12 +127,64 @@ source("scripts/04_regression_analysis.R")
 source("scripts/05_visualizations.R")
 ```
 
-4. **Generate the full report:**
-```r
-rmarkdown::render("sustainable_fashion_report.Rmd")
+5. **Generate the full report:**
+   - Open `sustainable_fashion_report.Rmd` in RStudio
+   - Click the "Knit" button at the top
+   - Or run: `rmarkdown::render("sustainable_fashion_report.Rmd")`
+
+#### Option 2: Using Terminal/Command Line
+
+1. **Clone the repository:**
+```bash
+git clone https://github.com/danielpuri1901/sustainable-fashion-analysis-r.git
+cd sustainable-fashion-analysis-r
 ```
 
-Or in RStudio: Open `sustainable_fashion_report.Rmd` and click "Knit"
+2. **Run scripts using Rscript** (requires R installed):
+```bash
+# Note: Rscript must be installed and in your PATH
+# On Mac, you may need to use the full path, e.g., /usr/local/bin/Rscript
+
+# Run analysis scripts in order:
+Rscript scripts/01_data_cleaning.R
+Rscript scripts/02_exploratory_analysis.R
+Rscript scripts/03_hypothesis_testing.R
+Rscript scripts/04_regression_analysis.R
+Rscript scripts/05_visualizations.R
+```
+
+3. **Generate the report from terminal:**
+```bash
+Rscript -e "rmarkdown::render('sustainable_fashion_report.Rmd')"
+```
+
+#### Option 3: Using R from Terminal
+
+1. **Navigate to project directory:**
+```bash
+cd sustainable-fashion-analysis-r
+```
+
+2. **Start R:**
+```bash
+R
+```
+
+3. **In the R console, run:**
+```r
+# Run analysis scripts
+source("scripts/01_data_cleaning.R")
+source("scripts/02_exploratory_analysis.R")
+source("scripts/03_hypothesis_testing.R")
+source("scripts/04_regression_analysis.R")
+source("scripts/05_visualizations.R")
+
+# Generate report
+rmarkdown::render("sustainable_fashion_report.Rmd")
+
+# Exit R when done
+quit()
+```
 
 ## Analysis Components
 
