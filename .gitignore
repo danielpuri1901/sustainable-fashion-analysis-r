@@ -1,0 +1,33 @@
+# R specific
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# R Markdown
+*.html
+*.pdf
+*_cache/
+*_files/
+
+# Output files (optional - uncomment if you don't want to track outputs)
+# output/*.txt
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Large data files (if any)
+*.zip
+*.tar.gz
