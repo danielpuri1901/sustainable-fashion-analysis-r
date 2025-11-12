@@ -1,0 +1,65 @@
+=== SUSTAINABLE FASHION REGRESSION ANALYSIS ===
+
+Analysis Date: 2025-11-12
+
+MODEL SUMMARY TABLE:
+
+Model 1 - Simple Linear (Water ~ Lifespan):
+  R²: 0.1772, Adj. R²: 0.1744, p < 0.0000
+
+Model 2 - Multiple Regression (CO2):
+  R²: 0.9073, Adj. R²: 0.9060
+  Significant predictors:
+# A tibble: 4 × 5
+  term                         estimate std.error statistic  p.value
+  <chr>                           <dbl>     <dbl>     <dbl>    <dbl>
+1 (Intercept)                     5.41     1.79        3.03 2.69e- 3
+2 production_methodSustainable  -19.1      2.06       -9.27 4.14e-18
+3 price_usd                       0.404    0.0164     24.7  1.17e-73
+4 recycled_content_pct            0.207    0.0782      2.64 8.62e- 3
+
+
+Model 3 - Multiple Regression (Water):
+  R²: 0.8262, Adj. R²: 0.8233
+
+
+Model 4 - With Interactions:
+  R²: 0.9150, Adj. R²: 0.9136
+  Interaction significant: Yes
+
+
+Best Model (Stepwise Selection):
+
+Call:
+lm(formula = env_impact_score ~ lifespan_years + production_method + 
+    co2_emissions_kg + water_usage_liters + price_usd + recycled_content_pct + 
+    washes_before_disposal, data = fashion_data)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.087488 -0.018525 -0.000808  0.018233  0.070324 
+
+Coefficients:
+                               Estimate Std. Error t value Pr(>|t|)    
+(Intercept)                   1.892e-01  2.509e-02   7.541 5.94e-13 ***
+lifespan_years               -1.167e-01  9.400e-03 -12.420  < 2e-16 ***
+production_methodSustainable -6.549e-02  1.477e-02  -4.433 1.32e-05 ***
+co2_emissions_kg              3.522e-03  6.056e-04   5.816 1.58e-08 ***
+water_usage_liters            9.337e-05  3.068e-06  30.436  < 2e-16 ***
+price_usd                     7.078e-04  2.366e-04   2.992 0.003009 ** 
+recycled_content_pct          1.856e-03  5.136e-04   3.614 0.000355 ***
+washes_before_disposal        4.822e-03  9.371e-04   5.146 4.90e-07 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.02971 on 292 degrees of freedom
+Multiple R-squared:  0.9868,	Adjusted R-squared:  0.9864 
+F-statistic:  3110 on 7 and 292 DF,  p-value: < 2.2e-16
+
+
+
+KEY INSIGHTS:
+1. Production method significantly affects CO2 emissions
+2. Lifespan is a strong predictor of environmental impact
+3. Recycled content percentage contributes to sustainability
+4. Interaction between lifespan and production method exists

@@ -1,0 +1,31 @@
+=== SUSTAINABLE FASHION DATA CLEANING SUMMARY ===
+
+Date: 2025-11-12
+
+Original records: 300
+Final records: 300
+Variables: 17
+
+=== Production Method Distribution ===
+
+Conventional  Sustainable 
+         139          161 
+
+=== Clothing Type Distribution ===
+
+   Coat   Dress  Jacket   Jeans   Pants   Shirt   Shoes   Skirt Sweater T-Shirt 
+     28      28      28      29      28      27      28      27      28      49 
+
+=== Sustainability Category Distribution ===
+
+   Low Impact Medium Impact   High Impact 
+          161            64            75 
+
+=== Key Statistics ===
+ co2_emissions_kg water_usage_liters lifespan_years    price_usd     
+ Min.   : 5.04    Min.   :1300       Min.   :2.100   Min.   : 18.20  
+ 1st Qu.:10.18    1st Qu.:1935       1st Qu.:2.900   1st Qu.: 31.12  
+ Median :18.36    Median :2520       Median :4.550   Median : 50.30  
+ Mean   :22.81    Mean   :3119       Mean   :4.438   Mean   : 56.53  
+ 3rd Qu.:29.30    3rd Qu.:4265       3rd Qu.:5.800   3rd Qu.: 72.88  
+ Max.   :58.92    Max.   :6200       Max.   :6.800   Max.   :133.60  

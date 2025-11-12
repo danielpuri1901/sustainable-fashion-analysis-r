@@ -1,0 +1,32 @@
+=== SUSTAINABLE FASHION EXPLORATORY DATA ANALYSIS ===
+
+Analysis Date: 2025-11-12
+
+Total Observations: 300
+
+KEY FINDINGS:
+
+1. Production Method Comparison:
+   - Sustainable production reduces CO2 by 53.2%
+   - Sustainable production reduces water usage by 43.0%
+   - Sustainable items last 89.1% longer
+
+2. Most Impactful Clothing Types:
+# A tibble: 3 × 6
+  clothing_type mean_co2 mean_water mean_lifespan mean_impact_score     n
+  <fct>            <dbl>      <dbl>         <dbl>             <dbl> <int>
+1 Coat              56.2      5160           3.65             0.778    28
+2 Jeans             33.0      4856.          4.68             0.560    29
+3 Jacket            42.6      4050           4.53             0.544    28
+
+3. Material Analysis:
+# A tibble: 3 × 6
+  material       avg_co2 avg_water avg_lifespan avg_impact_score     n
+  <fct>            <dbl>     <dbl>        <dbl>            <dbl> <int>
+1 Hemp              12.1     1621.         6.25            0.116    23
+2 Organic Cotton    12.9     2370.         5.48            0.162    44
+3 Linen             13.4     2485.         5.40            0.176    23
+
+4. Correlation Insights:
+   - CO2 and Water are highly correlated (r = 0.849)
+   - Longer lifespan correlates with higher initial CO2 (r = -0.255)

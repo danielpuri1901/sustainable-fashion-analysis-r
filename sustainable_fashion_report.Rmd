@@ -26,14 +26,14 @@ This report presents a comprehensive statistical analysis of the environmental i
 
 **Key Findings:**
 
-- Sustainable production methods reduce CO2 emissions by approximately 40-45%
-- Water usage is reduced by 45-50% in sustainable production
-- Sustainable items have 30-40% longer lifespans
-- Clothing type significantly affects environmental impact (p < 0.001)
-- Material choice is a critical factor in water consumption
-- Strong positive correlation between CO2 and water usage (r > 0.7)
+-   Sustainable production methods reduce CO2 emissions by approximately 40-45%
+-   Water usage is reduced by 45-50% in sustainable production
+-   Sustainable items have 30-40% longer lifespans
+-   Clothing type significantly affects environmental impact (p \< 0.001)
+-   Material choice is a critical factor in water consumption
+-   Strong positive correlation between CO2 and water usage (r \> 0.7)
 
----
+------------------------------------------------------------------------
 
 # 1. Introduction
 
@@ -45,22 +45,22 @@ The fashion industry is one of the largest contributors to environmental degrada
 
 This analysis addresses the following research questions:
 
-1. Does production method (sustainable vs. conventional) significantly affect environmental impact?
-2. How does clothing type influence CO2 emissions and water usage?
-3. Can we predict water savings based on item lifespan?
-4. What is the relationship between cost and environmental impact?
-5. Which materials are most environmentally friendly?
+1.  Does production method (sustainable vs. conventional) significantly affect environmental impact?
+2.  How does clothing type influence CO2 emissions and water usage?
+3.  Can we predict water savings based on item lifespan?
+4.  What is the relationship between cost and environmental impact?
+5.  Which materials are most environmentally friendly?
 
 ## 1.3 Dataset Description
 
 The dataset contains 300 observations of clothing items with the following variables:
 
-- **Environmental metrics:** CO2 emissions, water usage, lifespan
-- **Production characteristics:** Production method, material type
-- **Economic factors:** Price, cost per year
-- **Sustainability indicators:** Recycled content, environmental impact score
+-   **Environmental metrics:** CO2 emissions, water usage, lifespan
+-   **Production characteristics:** Production method, material type
+-   **Economic factors:** Price, cost per year
+-   **Sustainability indicators:** Recycled content, environmental impact score
 
----
+------------------------------------------------------------------------
 
 # 2. Data Preparation
 
@@ -113,7 +113,7 @@ summary_stats <- fashion_data %>%
 kable(summary_stats, caption = "Summary Statistics of Key Variables")
 ```
 
----
+------------------------------------------------------------------------
 
 # 3. Exploratory Data Analysis
 
@@ -209,15 +209,13 @@ cat(sprintf("Price and Lifespan: r = %.3f\n",
             cor_matrix["price_usd", "lifespan_years"]))
 ```
 
----
+------------------------------------------------------------------------
 
 # 4. Hypothesis Testing
 
 ## 4.1 Production Method Impact on CO2 Emissions
 
-**Hypothesis:**
-- H₀: No difference in mean CO2 emissions between production methods
-- Hₐ: Sustainable production has lower CO2 emissions
+**Hypothesis:** - H₀: No difference in mean CO2 emissions between production methods - Hₐ: Sustainable production has lower CO2 emissions
 
 ```{r t-test-co2}
 t_test_co2 <- t.test(co2_emissions_kg ~ production_method,
@@ -253,9 +251,7 @@ cat(sprintf("\nConclusion: %s\n",
 
 ## 4.3 ANOVA: Clothing Type Impact on CO2
 
-**Hypothesis:**
-- H₀: All clothing types have the same mean CO2 emissions
-- Hₐ: At least one clothing type has different mean CO2 emissions
+**Hypothesis:** - H₀: All clothing types have the same mean CO2 emissions - Hₐ: At least one clothing type has different mean CO2 emissions
 
 ```{r anova-clothing}
 anova_model <- aov(co2_emissions_kg ~ clothing_type, data = fashion_data)
@@ -278,7 +274,7 @@ cat(sprintf("Conclusion: %s\n",
                    "Fail to reject H₀")))
 ```
 
----
+------------------------------------------------------------------------
 
 # 5. Regression Analysis
 
@@ -356,7 +352,7 @@ result <- cbind(pred_data, round(predictions, 2))
 kable(result, caption = "Predicted CO2 Emissions for Different Scenarios")
 ```
 
----
+------------------------------------------------------------------------
 
 # 6. Key Findings and Insights
 
@@ -416,7 +412,7 @@ cost_benefit <- fashion_data %>%
 kable(cost_benefit, caption = "Cost-Benefit Analysis by Production Method")
 ```
 
----
+------------------------------------------------------------------------
 
 # 7. Recommendations
 
@@ -424,36 +420,36 @@ Based on the statistical analysis, we recommend:
 
 ## 7.1 For Consumers
 
-1. **Choose Sustainable Production:** Sustainable production reduces environmental impact by 40-50% across all metrics
-2. **Invest in Longevity:** Items with longer lifespans provide better environmental value despite potentially higher initial emissions
-3. **Material Matters:** Select materials like organic cotton, hemp, or recycled cotton which show lower environmental impact
-4. **Consider Total Cost:** While sustainable items may cost more initially, cost per year is often comparable due to longer lifespan
+1.  **Choose Sustainable Production:** Sustainable production reduces environmental impact by 40-50% across all metrics
+2.  **Invest in Longevity:** Items with longer lifespans provide better environmental value despite potentially higher initial emissions
+3.  **Material Matters:** Select materials like organic cotton, hemp, or recycled cotton which show lower environmental impact
+4.  **Consider Total Cost:** While sustainable items may cost more initially, cost per year is often comparable due to longer lifespan
 
 ## 7.2 For Producers
 
-1. **Adopt Sustainable Methods:** Significant reductions in CO2 and water usage are achievable through sustainable production
-2. **Focus on Durability:** Increasing product lifespan is a key factor in reducing environmental impact per year of use
-3. **Material Selection:** Choose materials with lower water consumption and CO2 emissions
-4. **Transparency:** Provide clear environmental impact metrics to help consumers make informed decisions
+1.  **Adopt Sustainable Methods:** Significant reductions in CO2 and water usage are achievable through sustainable production
+2.  **Focus on Durability:** Increasing product lifespan is a key factor in reducing environmental impact per year of use
+3.  **Material Selection:** Choose materials with lower water consumption and CO2 emissions
+4.  **Transparency:** Provide clear environmental impact metrics to help consumers make informed decisions
 
 ## 7.3 For Policy Makers
 
-1. **Incentivize Sustainable Production:** Tax breaks or subsidies for sustainable production methods
-2. **Standardize Metrics:** Establish standardized environmental impact reporting for fashion products
-3. **Education Campaigns:** Promote awareness of the environmental impact of fashion choices
-4. **Recycling Programs:** Support programs that increase garment recycling and reuse
+1.  **Incentivize Sustainable Production:** Tax breaks or subsidies for sustainable production methods
+2.  **Standardize Metrics:** Establish standardized environmental impact reporting for fashion products
+3.  **Education Campaigns:** Promote awareness of the environmental impact of fashion choices
+4.  **Recycling Programs:** Support programs that increase garment recycling and reuse
 
----
+------------------------------------------------------------------------
 
 # 8. Limitations
 
-- Dataset is synthetic and may not perfectly represent real-world distributions
-- Analysis assumes linear relationships which may not hold in all cases
-- Does not account for transportation, packaging, or end-of-life disposal
-- Regional variations in production methods and environmental regulations not considered
-- Consumer behavior and actual usage patterns not modeled
+-   Dataset is synthetic and may not perfectly represent real-world distributions
+-   Analysis assumes linear relationships which may not hold in all cases
+-   Does not account for transportation, packaging, or end-of-life disposal
+-   Regional variations in production methods and environmental regulations not considered
+-   Consumer behavior and actual usage patterns not modeled
 
----
+------------------------------------------------------------------------
 
 # 9. Conclusion
 
@@ -463,40 +459,40 @@ The choice of material and clothing type also significantly affects environmenta
 
 Moving forward, the fashion industry should prioritize sustainable production methods, material selection, and product longevity to minimize environmental impact while maintaining economic viability.
 
----
+------------------------------------------------------------------------
 
 # 10. Technical Appendix
 
 ## 10.1 Statistical Methods Used
 
-- **Descriptive Statistics:** Mean, median, standard deviation
-- **Hypothesis Testing:** Two-sample t-tests, one-way ANOVA, Tukey HSD post-hoc tests
-- **Regression Analysis:** Simple and multiple linear regression, polynomial regression
-- **Effect Sizes:** Cohen's d, eta-squared
-- **Diagnostic Tests:** Shapiro-Wilk (normality), Levene's test (homogeneity), VIF (multicollinearity)
+-   **Descriptive Statistics:** Mean, median, standard deviation
+-   **Hypothesis Testing:** Two-sample t-tests, one-way ANOVA, Tukey HSD post-hoc tests
+-   **Regression Analysis:** Simple and multiple linear regression, polynomial regression
+-   **Effect Sizes:** Cohen's d, eta-squared
+-   **Diagnostic Tests:** Shapiro-Wilk (normality), Levene's test (homogeneity), VIF (multicollinearity)
 
 ## 10.2 Software and Packages
 
-- **R Version:** `r R.version.string`
-- **Key Packages:** dplyr, ggplot2, tidyr, readr, broom, car, MASS
+-   **R Version:** `r R.version.string`
+-   **Key Packages:** dplyr, ggplot2, tidyr, readr, broom, car, MASS
 
 ## 10.3 Reproducibility
 
 All code and data used in this analysis are available in the project repository. To reproduce this analysis:
 
-1. Load the data from `data/fashion_impact_cleaned.csv`
-2. Run the scripts in the `scripts/` directory in numerical order
-3. Knit this R Markdown document to generate the report
+1.  Load the data from `data/fashion_impact_cleaned.csv`
+2.  Run the scripts in the `scripts/` directory in numerical order
+3.  Knit this R Markdown document to generate the report
 
----
+------------------------------------------------------------------------
 
 # References
 
-- World Resources Institute. (2023). "Fashion Industry Environmental Impact"
-- Ellen MacArthur Foundation. (2023). "A New Textiles Economy: Redesigning Fashion's Future"
-- United Nations Environment Programme. (2023). "Sustainability and Circularity in the Textile Value Chain"
+-   World Resources Institute. (2023). "Fashion Industry Environmental Impact"
+-   Ellen MacArthur Foundation. (2023). "A New Textiles Economy: Redesigning Fashion's Future"
+-   United Nations Environment Programme. (2023). "Sustainability and Circularity in the Textile Value Chain"
 
----
+------------------------------------------------------------------------
 
 **Report Generated:** `r Sys.Date()`
 

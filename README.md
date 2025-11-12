@@ -79,6 +79,7 @@ install.packages(c(
   "ggplot2",
   "tidyr",
   "readr",
+  "tibble",
   "broom",
   "car",
   "MASS",
@@ -109,7 +110,7 @@ cd sustainable-fashion-analysis-r
 
 3. **Install packages** (if not already installed):
 ```r
-install.packages(c("dplyr", "ggplot2", "tidyr", "readr", "broom", "car",
+install.packages(c("dplyr", "ggplot2", "tidyr", "readr", "tibble", "broom", "car",
                    "MASS", "scales", "gridExtra", "RColorBrewer",
                    "knitr", "rmarkdown", "lmtest"))
 ```

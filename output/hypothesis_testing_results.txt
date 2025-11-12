@@ -1,0 +1,29 @@
+=== SUSTAINABLE FASHION HYPOTHESIS TESTING RESULTS ===
+
+Analysis Date: 2025-11-12
+
+SUMMARY OF KEY FINDINGS:
+
+1. PRODUCTION METHOD IMPACT:
+   CO2 Emissions: t = 10.841, p = 1.0000 
+   Effect size (Cohen's d): 1.316
+   Water Usage: t = 13.556, p = 1.0000 
+   Effect size (Cohen's d): 1.628
+   Lifespan: t = -37.996, p = 1.0000 
+
+2. CLOTHING TYPE IMPACT (ANOVA):
+   F = 598.652, p = 0.0000 ***
+   Eta-squared: 0.949 (94.9% variance explained)
+
+3. MATERIAL TYPE IMPACT (ANOVA):
+   F = 23.955, p = 0.0000 ***
+   Eta-squared: 0.365
+
+4. INTERACTION EFFECT:
+   F = 90.414, p = 0.0000 ***
+
+5. SUSTAINABLE MATERIALS:
+   t = 19.905, p = 0.0000 ***
+
+
+Significance codes: *** p < 0.05
